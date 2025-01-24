@@ -1,42 +1,41 @@
-# Indique aux robots que toutes les pages peuvent être explorées, sauf restrictions spécifiées
+# robots.txt pour https://clairvoyancemedium.github.io/Melhor-videncia-por-e-mail-r-pida-e-barata.github.io/
+
 User-agent: *
+Allow: /
+
+# Blocage des pages sensibles ou non pertinentes pour le référencement
 Disallow: /admin/
-Disallow: /tmp/
+Disallow: /login/
 Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-content/uploads/
+Disallow: /search/
+Disallow: /?s=
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /my-account/
 
-# Bloquer des URL avec paramètres inutiles pour l'indexation
-Disallow: /*?debug=true
-Disallow: /*?preview=true
+# Autoriser l'accès aux fichiers CSS et JS pour un bon rendu dans les SERPs
+Allow: /*.css$
+Allow: /*.js$
 
-# Permettre les fichiers nécessaires au bon affichage et fonctionnement
-Allow: /css/
-Allow: /js/
-Allow: /images/
+# Blocage des fichiers inutiles pour les moteurs de recherche
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*.exe$
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+Disallow: /*.mp4$
+Disallow: /*.mp3$
+Disallow: /*.avi$
+Disallow: /*.xml$
+Disallow: /*.txt$
 
-# Référencement des ressources multimédias
-Allow: *.png
-Allow: *.jpg
-Allow: *.webp
-Allow: *.css
-Allow: *.js
-
-# Fournir le chemin du fichier sitemap pour une meilleure indexation
-Sitemap: https://www.clairvoyancemedium.com/sitemap.xml
-
-# Autorisation pour les robots Google et Bing pour maximiser les campagnes publicitaires
-User-agent: Googlebot
-Allow: /
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# Bloquer les robots nuisibles ou non désirés
-User-agent: BadBot
-Disallow: /
-User-agent: EvilScraper
-Disallow: /
-
-# Empêcher l'exploration des fichiers sensibles
-Disallow: /config/
-Disallow: /backup/
+# Sitemap pour guider les robots d'indexation
+Sitemap: https://clairvoyancemedium.github.io/Melhor-videncia-por-e-mail-r-pida-e-barata.github.io/sitemap.xml
