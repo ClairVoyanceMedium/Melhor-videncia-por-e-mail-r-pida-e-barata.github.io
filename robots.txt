@@ -1,9 +1,7 @@
-# robots.txt pour https://clairvoyancemedium.github.io/Melhor-videncia-por-e-mail-r-pida-e-barata.github.io/
-
 User-agent: *
 Allow: /
 
-# Blocage des pages sensibles ou non pertinentes pour le référencement
+# 🔒 Blocage des pages sensibles et inutiles pour le SEO
 Disallow: /admin/
 Disallow: /login/
 Disallow: /private/
@@ -13,29 +11,108 @@ Disallow: /wp-includes/
 Disallow: /wp-login.php
 Disallow: /wp-content/plugins/
 Disallow: /wp-content/themes/
-Disallow: /wp-content/uploads/
+Disallow: /wp-content/uploads/private/
 Disallow: /search/
-Disallow: /?s=
 Disallow: /cart/
 Disallow: /checkout/
 Disallow: /my-account/
 
-# Autoriser l'accès aux fichiers CSS et JS pour un bon rendu dans les SERPs
+# 🎯 Gestion des paramètres URL (SEO-friendly)
+Disallow: /*?ref=
+Disallow: /*?utm_
+Disallow: /*?sessionid=
+Clean-param: ref&utm_source&utm_medium&utm_campaign&utm_term&utm_content / 
+
+# ✅ Autorisation des ressources CSS, JS et images (SEO Google Images)
+Allow: /wp-content/uploads/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
 Allow: /*.css$
 Allow: /*.js$
 
-# Blocage des fichiers inutiles pour les moteurs de recherche
-Disallow: /*.pdf$
+# 🎥 Gestion des fichiers multimédias (pour le SEO vidéo/audio)
+Allow: /*.mp4$
+Allow: /*.mp3$
+
+# ❌ Blocage des fichiers inutiles
 Disallow: /*.zip$
 Disallow: /*.exe$
-Disallow: /*.jpg$
-Disallow: /*.png$
-Disallow: /*.gif$
-Disallow: /*.mp4$
-Disallow: /*.mp3$
-Disallow: /*.avi$
-Disallow: /*.xml$
 Disallow: /*.txt$
+Disallow: /*.xml$
 
-# Sitemap pour guider les robots d'indexation
+# 🗺️ Sitemap pour un crawl rapide
+Allow: /sitemap.xml
 Sitemap: https://clairvoyancemedium.github.io/Melhor-videncia-por-e-mail-r-pida-e-barata.github.io/sitemap.xml
+
+# ⚙️ Optimisation du crawl pour les moteurs de recherche (évite la surcharge serveur)
+User-agent: Googlebot
+Crawl-delay: 3
+
+User-agent: Bingbot
+Crawl-delay: 5
+
+User-agent: Yandex
+Crawl-delay: 10
+
+# 🤖 Activation de l'IA et de la recherche vocale
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bingbot-AI
+Allow: /
+
+User-agent: AlexaBot
+Allow: /
+
+User-agent: SiriBot
+Allow: /
+
+# 🛑 Blocage des robots indésirables (protection contre le scraping et spam)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: Archive.org_bot
+Disallow: /
+
+# ❌ Protection contre le scraping et les IA malveillantes
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
